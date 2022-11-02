@@ -1,6 +1,6 @@
 # `🍁 𝐊𝐀𝐍𝐓𝐔 - 𝐁𝐎𝐓 🍁`
 <p align="center"> 
-  <a href="https://github.com/cagthegame/KANTU-BOT"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=17&duration=4000&color=F7B11B&center=falso&vCenter=falso&lines=KANTU+BOT+MD++🤖;Gracias+por+visitar+este+repositorio+UwU.💥" height="90px"
+  <a href="https://github.com/cagthegame/KANTU-BOT"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=17&duration=4000&color=F7B11B&center=falso&vCenter=falso&lines=KANTU+BOT+MD++🤖;Gracias+por+visitarme+UwU.💥" height="90px"
 </p> 
 
 
