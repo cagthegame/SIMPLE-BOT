@@ -1158,7 +1158,7 @@ export async function handler(chatUpdate) {
                     continue // Limit habis
                 }
 if (!isPrems && plugin.dorracoins && global.db.data.users[m.sender].dorracoins < plugin.dorracoins * 1) {
-                    this.reply(m.chat, `${ag}\n𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝘿𝙊𝙍𝙍𝘼𝙏𝘾𝙊𝙄𝙉𝙎 🪙`, m)
+                    this.reply(m.chat, `${ag}\n𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝗞𝗔𝗡𝗧𝗨 𝘾𝙊𝙄𝙉𝙎 🪙`, m)
                     continue // Limit habis
 
 }
@@ -1222,7 +1222,7 @@ if (!isPrems && plugin.dorracoins && global.db.data.users[m.sender].dorracoins <
                     if (m.limit)
                         m.reply(+m.limit + ' 𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀(𝙎) 💎 𝙐𝙎𝘼𝘿𝙊(𝙎)')
                  if (m.dorracoins)
-                        m.reply(+m.dorracoins + ' 𝘿𝙊𝙍𝙍𝘼𝙏𝘾𝙊𝙄𝙉𝙎 🪙 𝙐𝙎𝘼𝘿𝙊(𝙎)')
+                        m.reply(+m.dorracoins + ' 𝗞𝗔𝗡𝗧𝗨𝘾𝙊𝙄𝙉𝙎 🪙 𝙐𝙎𝘼𝘿𝙊(𝙎)')
               
                 }
                 break
