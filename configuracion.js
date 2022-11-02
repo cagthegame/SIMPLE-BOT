@@ -6,17 +6,17 @@ import fs from 'fs'
 
 //cambia los números que sean propietarios 
 global.owner = [
-  ['593959425714', '🔰  †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤ - Creador 🔰', true],
-  ['51993138466', '🔰  †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤ - Collaborator 1 🔰', true],
-  ['573184314110', '🔰  †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤- Collaborator 3 🔰', true],
-  ['50246028932', '🔰  †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤ -  Col𝚊𝚋𝚘𝚛𝚊𝚍𝚘𝚛  4 🔰', true],
-  ['51928078536', '🔰  †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤ - Col𝚊𝚋𝚘𝚛𝚊𝚍𝚘𝚛𝚊 5 🔰', true],
-  ['51936767238'],
-  ['584125778026']
+  ['525591478197', '🔰  𝕂𝔸ℕ𝕋𝕌 - 𝔹𝕆𝕋 - Creador 🔰', true],
+  ['5591478197', '🔰  𝕂𝔸ℕ𝕋𝕌 - 𝔹𝕆𝕋 - Collaborator 1 🔰', true],
+  ['525513079303', '🔰  𝕂𝔸ℕ𝕋𝕌 - 𝔹𝕆𝕋- Collaborator 3 🔰', true],
+  ['525543106177', '🔰  𝕂𝔸ℕ𝕋𝕌 - 𝔹𝕆𝕋 -  Col𝚊𝚋𝚘𝚛𝚊𝚍𝚘𝚛  4 🔰', true],
+  ['525543106177', '🔰 𝕂𝔸ℕ𝕋𝕌 - 𝔹𝕆𝕋 - Col𝚊𝚋𝚘𝚛𝚊𝚍𝚘𝚛𝚊 5 🔰', true],
+  ['525591478197'],
+  ['525591478197']
 
 ] 
-global.suittag = ['593959425714'] 
-global.mods = ['595986674310'] 
+global.suittag = ['525591478197'] 
+global.mods = ['525591478197'] 
 global.prems = [] 
 
 global.APIs = { // API Prefix
@@ -72,19 +72,19 @@ global.APIKeys = { // APIKey Here
 }
 
 /* ______________________________________________ */
-global.creadorname = '𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂'
+global.creadorname = '𝐂𝐑𝐈𝐒𝐬'
 global.creatorname = creadorname
-global.library = '𝐁𝐀𝐈𝐋𝐄𝐘𝐒-𝐌𝐃'
+global.library = '𝐂𝐑𝐈𝐒𝐬'
 global.vs = '1.3.0'
 global.version = vs
 //------------- Sticker WM -----------
 global.packname = '(☞ﾟ∀ﾟ)☞'
-global.author = '†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤'
-global.wm = '†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤ | 𝘿𝙄𝙀𝙂𝙊-𝙊𝙁𝘾'
-global.igfg = '†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤'
+global.author = '𝐊𝐀𝐍𝐓𝐔 - 𝐁𝐎𝐓'
+global.wm = '𝐊𝐀𝐍𝐓𝐔 - 𝐁𝐎𝐓'
+global.igfg = '𝐊𝐀𝐍𝐓𝐔 - 𝐁𝐎𝐓'
 global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
 //-------------------
-global.md = 'https://chat.whatsapp.com/LlAbJM659dOBVJnxOIMl9h'
+global.md = 'https://chat.whatsapp.com/LLWPIF1EGkqBDgCjALubV5'
 global.dorramd = md
 
 /* _____________________________________________ */
@@ -95,7 +95,7 @@ global.fg = '☆━━━━ ⚠️ 𝙵𝙰𝙻𝙻𝙾 | 𝙵𝙰𝙻𝙻 ⚠�
 global.fallo = fg
 global.mg = '══ ❎ 𝙻𝙾 𝚄𝚂𝙾 𝙼𝙰𝙻 ❎ ══'
 global.mal = mg
-global.dorre = 'DORRAT-BOT-MD'
+global.dorre = 'KANTU-BOT'
 global.DORRA = dorre
 
 /* Imagenes___________________ */
@@ -304,7 +304,7 @@ global.rpgg = { //Solo emojis
       lion: '🦁',
       magicwand: '⚕️',
       mana: '🪄',
-      dorracoins: '🪙',
+      kantucoins: '🪙',
       monyet: '🐒',
       mythic: '🗳️',
       panda: '🐼',
@@ -350,8 +350,8 @@ global.rpgshop = { //Tienda
       berlian: '♦️ Joya : Ruby',
       kyubi: '🌀 Magia : Magic',
       gold: '👑 Oro : Gold',
-      dorracoins: '🪙 DorratCoins : BotCoins',
-      tiketcoin: '🎫 DORRAT Tickers',
+      kantucoins: '🪙 DorratCoins : BotCoins',
+      tiketcoin: '🎫 KANTUS Tickers',
             
       potion: '🥤 Poción : Potion',
       aqua: '💧 Agua : Water',
@@ -434,7 +434,7 @@ global.rpgshopp = { //Tienda
       berlian: '♦️',
       kyubi: '🌀',
       gold: '👑',
-      dorracoins: '🪙',
+      kantucoins: '🪙',
       tiketcoin: '🎫',
             
       potion: '🥤',
