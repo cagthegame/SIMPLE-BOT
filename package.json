@@ -1,7 +1,7 @@
 {
-    "name": "DORRAT-BOT-MD",
+    "name": "KANTU-BOT-MD",
     "version": "1.0.0",
-    "description": "Subscribete al canal de YT Diegogameplays82",
+    "description": "Subscribete al canal de YT ",
     "main": "dorrat-inicio.js",
     "type": "module",
     "directories": {
@@ -19,7 +19,7 @@
 
     "homepage": "https://github.com/DIEGO-OFC/DORRAT-BOT-MD",
     "author": {
-        "name": "DIEGO-OFC"
+        "name": "CRISs-OFC"
     },
 
     "repository": {
