@@ -4,16 +4,16 @@ var document = doc[Math.floor(Math.random() * doc.length)]
 let text = `
 *—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝙼𝙸 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 𝙴𝚂 wa.me/525591478197*
 
-*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 𝟷 𝙴𝚂 wa.me/525513079303*
+*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 𝟷 𝙴𝚂 wa.me/5215591478197*
 
 *—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 2 𝙴𝚂 wa.me/5215591478197*
 
-*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 3 𝙴𝚂 wa.me/5591478197*
+*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 3 𝙴𝚂 wa.me/525591478197*
 
 *—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝙼𝙸 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁𝙰 4 𝙴𝚂 wa.me/525543106177*
 `.trim()   
 let buttonMessage= {
-'document': { url: `https://github.com/DIEGO-OFC/DORRAT-BOT-MD` },
+'document': { url: `https://github.com/cagthegame/KANTU-BOT` },
 'mimetype': `application/${document}`,
 'fileName': `「  𝐊𝐀𝐍𝐓𝐔 - 𝐁𝐎𝐓 」`,
 'fileLength': 99999999999999,
@@ -22,13 +22,13 @@ let buttonMessage= {
 'forwardingScore': 200,
 'isForwarded': true,
 'externalAdReply': {
-'mediaUrl': 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD',
+'mediaUrl': 'https://github.com/cagthegame/KANTU-BOT',
 'mediaType': 2,
 'previewType': 'pdf',
 'title': 'ᴇʟ ᴍᴇᴊᴏʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ⁩',
 'body': wm,
 'thumbnail': imagen1,
-'sourceUrl': 'https://youtube.com/channel/UC7NB_0XT0vlKom0M0aCrs5g' }},
+'sourceUrl': 'https://youtube.com/channel' }},
 'caption': text,
 'footer': wm,
 'buttons':[
