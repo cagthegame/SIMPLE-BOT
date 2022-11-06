@@ -11,7 +11,7 @@ let _muptime
       }) * 1000
     }
     let muptime = clockString(_muptime)
-		let bio = `\nBOT KANTU\n⏰ Tiempo Activo ${muptime}\n\n`
+		let bio = `\n𝗠𝗘𝗝𝗢𝗥 𝗕𝗢𝗧 𝗗𝗘 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 𝕂𝔸ℕ𝕋𝕌 𝔹𝕆𝕋\n⏰ 𝐓𝐈𝐄𝐌𝐏𝐎 𝐀𝐂𝐓𝐈𝐕𝐎 ${muptime}\n\n`
 		await this.updateProfileStatus(bio).catch(_ => _)
 		setting.status = new Date() * 1
 
