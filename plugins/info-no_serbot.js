@@ -6,15 +6,6 @@ let texto1 = `
 
 *—◉ 𝙿𝚄𝙴𝙳𝙴 𝙿𝚁𝙾𝙱𝙰𝚁 𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝚁 𝙳𝙴𝚂𝙳𝙴 𝙲𝙴𝚁𝙾 𝙴𝙻 𝙱𝙾𝚃 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝙳𝙾 𝚄𝙽 tutorial de instalación*
 
-*—◉ 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 𝙰𝙲𝙸𝙳𝙸𝙲𝙽𝙾𝙳𝙴𝚂 𝙷𝙾𝚂𝚃*
-> Tutorial:
-entrar a la pagina acidicnodes.com registrarte con una cuenta de gmail, una vez registrado debes vincular tu cuenta de discord y verificar el correo, una vez hecho entrar al apartado de servidores, le da en crear uno, ponen nombre, eligen programing, seleccionan el nodo se recomienda el 2, una vez creado el servidor seleccionan "gestionar" los llevara a otra pagina, ponen su mismo correo y contra con la que se registraron, esperan a que pase la instalación,
-luego entran a "Startup" le dan en "seleccionar aplicación" buscan [es] DIEGO-OFC/DORRAT-BOT-MD lo seleccionan, una vez seleccionado van a "settings" tocan en "reinstalle server" confirman y esperan que pase la instalación, luego tocan "console" y dan start escanean qr y listo.
-_________________________
-> Pagina: https://billing.acidicnodes.ml/register?ref=ADII104p
-> Soporte: https://whatsapp.acidicnodes.com
-_________________________
-
 *—◉ 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚃𝙴𝚁𝙼𝚄𝚇*
 > cd
 > termux-setup-storage
@@ -25,7 +16,7 @@ _________________________
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
 > pkg install yarn
-> git clone https://github.com/DIEGO-OFC/DORRAT-TERMUX
+> git clone https://github.com/cagthegame/KANTU-BOT
 > cd DORRAT-TERMUX
 > yarn install 
 > npm install
@@ -33,7 +24,7 @@ _________________________
 > npm install 
 > npm start*`
 let buttonMessage= {
-'document': { url: `https://github.com/DIEGO-OFC/DORRAT-BOT-MD` },
+'document': { url: `https://github.com/cagthegame/KANTU-BOT` },
 'mimetype': `application/${document}`,
 'fileName': `「  𝑯𝒆𝒍𝒍𝒐 𝑾𝒐𝒓𝒍𝒅 」`,
 'fileLength': 99999999999999,
@@ -42,13 +33,13 @@ let buttonMessage= {
 'forwardingScore': 200,
 'isForwarded': true,
 'externalAdReply': {
-'mediaUrl': 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD',
+'mediaUrl': 'https://github.com/cagthegame/KANTU-BOT',
 'mediaType': 2,
 'previewType': 'pdf',
 'title': 'ᴇʟ ᴍᴇᴊᴏʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ⁩',
 'body': wm,
 'thumbnail': imagen1,
-'sourceUrl': 'https://www.youtube.com/channel/UCSTDMKjbm-EmEovkygX-lCA' }},
+'sourceUrl': 'https://github.com/cagthegame/KANTU-BOT' }},
 'caption': texto1,
 'footer': wm,
 'buttons':[
