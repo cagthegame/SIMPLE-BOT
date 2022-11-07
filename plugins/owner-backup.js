@@ -1,4 +1,4 @@
-/*BY https://github.com/DIEGO-OFC*/
+/*BY https://github.com/cagthegame*/
 
 import fs from 'fs'
 import fetch from 'node-fetch'
@@ -22,8 +22,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                 year: 'numeric'
             })
 conn.reply(m.chat, '*enviando backup.*', m)
-conn.reply('593959425714' + '@s.whatsapp.net', `*🗓️ Database:* ${date}`, null)
-          conn.sendFile('593959425714' + '@s.whatsapp.net', fs.readFileSync('./database.json'), 'database.json', '', 0, 0, { mimetype: 'application/json', quoted: fdoc})
+conn.reply('525591478197' + '@s.whatsapp.net', `*🗓️ Database:* ${date}`, null)
+          conn.sendFile('525591478197' + '@s.whatsapp.net', fs.readFileSync('./database.json'), 'database.json', '', 0, 0, { mimetype: 'application/json', quoted: fdoc})
  }
  
  handler.help = ['backup']
