@@ -1,5 +1,5 @@
 /*BY 
-https://github.com/DIEGO-OFC*/
+https://github.com/cagthegame*/
 
 import syntaxerror from 'syntax-error'
 import { format } from 'util'
