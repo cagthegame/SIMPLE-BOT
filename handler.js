@@ -908,7 +908,8 @@ export async function handler(chatUpdate) {
                 if (!('viewonce' in chat)) chat.viewonce = false                                 
                 if (!('antitoxic' in chat)) chat.antitoxic = true
                 if (!('antiArab' in chat)) chat.antiArab = false
-                if (!('antiTraba' in chat)) chat.antiTraba = false                   
+                if (!('antiTraba' in chat)) chat.antiTraba = false
+	        if (!('modoadmin' in chat)) chat.modoadmin = false  
                 if (!isNumber(chat.expired)) chat.expired = 0
                     
             } else
@@ -940,6 +941,7 @@ export async function handler(chatUpdate) {
                     antiArab: false,
                     antiviewonce: false,
                     antitoxic: true,
+		    modoadmin: false,
                     expired: 0,
                 }
             let settings = global.db.data.settings[this.user.jid]
@@ -1321,7 +1323,7 @@ export async function participantsUpdate({ id, participants, action }) {
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*𝙂𝙧𝙪𝙥𝙤 𝙂𝙚𝙣𝙞𝙖𝙡 | 𝘾𝙤𝙤𝙡 𝙂𝙧𝙤𝙪𝙥 😼*') :
                             (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', await this.getName(user)) //.replace('@user', '@' + user.split('@')[0])
                             let apii = await this.getFile(pp)
-                            this.sendHydrated(id, text, groupMetadata.subject, apii.data, 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃', null, null, [
+                            this.sendHydrated(id, text, groupMetadata.subject, apii.data, 'https://github.com/cagthegame/KANTU-BOT', '𝐊𝐀𝐍𝐓𝐔 - 𝐁𝐎𝐓-𝐌𝐃', null, null, [
                             [(action == 'add' ? '𝐒𝐄 𝐔𝐍𝐈𝐎 🌠 | 𝐇𝐈!!' : '𝐒𝐄 𝐅𝐔𝐄 𝐔𝐍 𝐌𝐀𝐑𝐈𝐂𝐎𝐍 🏳️‍🌈 | 𝐋𝐄𝐒𝐁𝐈𝐀𝐍𝐀'), '.s'],    
                             ['⫹⫺ 𝐌𝐄𝐍𝐔', '/menu']
                             ], '', { mentions: [user]})
