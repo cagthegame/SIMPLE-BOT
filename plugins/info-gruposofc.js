@@ -4,17 +4,17 @@ let handler = async (m, { conn, command }) => conn.sendButton(m.chat, `
 *
 
 *➤ 𝙶𝚛𝚞𝚙𝚘𝚜 𝚘𝚏𝚒𝚌𝚒𝚊𝚕𝚎𝚜 𝚍𝚎𝚕 𝙱𝚘𝚝:*
-*1.-* https://chat.whatsapp.com/LLWPIF1EGkqBDgCjALubV5
+*1.-* https://chat.whatsapp.com/IrvY5IpNHrOC92HUBvlCEH
 
-*2._* https://chat.whatsapp.com/LLWPIF1EGkqBDgCjALubV5
+*2._* https://chat.whatsapp.com/FPkQqMHIMLh2gR626AOU7V
 
-*3._* https://chat.whatsapp.com/LLWPIF1EGkqBDgCjALubV5
+*3._* https://chat.whatsapp.com/IrvY5IpNHrOC92HUBvlCEH
 
-*4._* https://chat.whatsapp.com/LLWPIF1EGkqBDgCjALubV5
+*4._* https://chat.whatsapp.com/FPkQqMHIMLh2gR626AOU7V
 
 *5._* https://chat.whatsapp.com/IrvY5IpNHrOC92HUBvlCEH
 
-*6._* https://chat.whatsapp.com/IrvY5IpNHrOC92HUBvlCEH
+*6._* https://chat.whatsapp.com/FPkQqMHIMLh2gR626AOU7V
 
 `.trim(), wm, media, [['💟 𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 💟', '#menu']], m)
 handler.command = /^linkgc|grupos$/i
