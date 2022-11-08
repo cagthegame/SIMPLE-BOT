@@ -11,7 +11,7 @@
 `—◉ DUDAS SOBRE EL BOT?, CONTACTANOS ✨`
 
 <a href="http://wa.me/525591478197" target="blank"><img src="https://img.shields.io/badge/CRISs_OFC_CREADOR-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-<a href="http://wa.me/525513079303" target="blank"><img src="https://img.shields.io/badge/ELpp_COLAB.1-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="http://wa.me/5215591478197" target="blank"><img src="https://img.shields.io/badge/ELpp_COLAB.1-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/525543106177" target="blank"><img src="https://img.shields.io/badge/BIGA_COLAB.2-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
 
@@ -19,9 +19,9 @@
 ### `—◉ 🔥GRUPOS OFICIALES`
 
 [![blog](https://img.shields.io/badge/Grupo-Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white 
-)](https://chat.whatsapp.com/LLWPIF1EGkqBDgCjALubV5)  <a href="https://chat.whatsapp.com/LLWPIF1EGkqBDgCjALubV5"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/1200px-WhatsApp_logo-color-vertical.svg.png" height="29px"></a>
-[![blog](https://img.shields.io/badge/Grupo-Oficial2-25D366?style=for-the-badge&logo=whatsapp&logoColor=white 
 )](https://chat.whatsapp.com/IrvY5IpNHrOC92HUBvlCEH)  <a href="https://chat.whatsapp.com/IrvY5IpNHrOC92HUBvlCEH"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/1200px-WhatsApp_logo-color-vertical.svg.png" height="29px"></a>
+[![blog](https://img.shields.io/badge/Grupo-Oficial2-25D366?style=for-the-badge&logo=whatsapp&logoColor=white 
+)](https://chat.whatsapp.com/FPkQqMHIMLh2gR626AOU7V)  <a href="https://chat.whatsapp.com/FPkQqMHIMLh2gR626AOU7V"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/1200px-WhatsApp_logo-color-vertical.svg.png" height="29px"></a>
 
 ---------
 > GRUPOS OFICIALES DEL BOT PARA LA DIVERSIÓN :)
@@ -71,7 +71,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd 
 > cd DORRAT-TERMUX
-> rm -rf DORRATSESSION//SI NO TE  FUNCIONA UTILIZA > rm -rf KANTU-BOT
+> rm -rf DORRATSESSION
 > npm start
 ```
 
