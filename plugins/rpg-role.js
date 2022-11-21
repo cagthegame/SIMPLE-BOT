@@ -39,11 +39,11 @@ const roles = {
       '*DIAMANTE III* 💎': 37,
        '*DIAMANTE II* 💎': 38,
         '*DIAMANTE I* 💎': 39,
-    '*PRO EN DORRAT V* 🌠': 40,
-     '*PRO EN DORRAT IV* 🌠': 41,
-      '*PRO EN DORRAT III* 🌠': 42,
-       '*PRO EN DORRAT II* 🌠': 43,
-        '*PRO EN DORRAT I* 🌠': 44,
+    '*PRO EN KANTU V* 🌠': 40,
+     '*PRO EN KANTU IV* 🌠': 41,
+      '*PRO EN KANTU III* 🌠': 42,
+       '*PRO EN KANTU II* 🌠': 43,
+        '*PRO EN KANTU I* 🌠': 44,
     '*SUPER PRO V* 🎩': 45,
      '*SUPER PRO IV* 🎩': 46,
       '*SUPER PRO III* 🎩': 47,
@@ -118,9 +118,9 @@ handler.before = function (m, text) {
                                                                                         : ((user.level >= 63) && (user.level <= 66)) ? '*DIAMANTE III* 💎'
                                                                                             : ((user.level >= 66) && (user.level <= 69)) ? '*DIAMANTE II* 💎'
                                                                                                 : ((user.level >= 69) && (user.level <= 71)) ? '*DIAMANTE I* 💎'
-                                                                                                    : ((user.level >= 71) && (user.level <= 74)) ? '*PRO EN DORRAT III* 🌠'
-                                                                                                        : ((user.level >= 74) && (user.level <= 77)) ? '*PRO EN DORRAT II* 🌠'
-                                                                                                            : ((user.level >= 77) && (user.level <= 80)) ? '*PRO EN DORRAT I* 🌠'
+                                                                                                    : ((user.level >= 71) && (user.level <= 74)) ? '*PRO EN KANTU III* 🌠'
+                                                                                                        : ((user.level >= 74) && (user.level <= 77)) ? '*PRO EN KANTU II* 🌠'
+                                                                                                            : ((user.level >= 77) && (user.level <= 80)) ? '*PRO EN KANTU I* 🌠'
                                                                                                                 : ((user.level >= 80) && (user.level <= 83)) ? '*SUPER PRO III* 🎩'
                                                                                                                     : ((user.level >= 83) && (user.level <= 86)) ? '*SUPER PRO II* 🎩'
                                                                                                                         : ((user.level >= 86) && (user.level <= 89)) ? '*SUPER PRO I* 🎩'
