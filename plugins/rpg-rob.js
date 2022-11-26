@@ -36,11 +36,11 @@ global.crimen = ["Robaste a un politico y ganas", "Robaste al Gobierno, ganando"
 "Robaste un Avión y ganaste", 
 "trabajaste para la mafia y te pagaron", "Robaste dos obra de arte del museo de España y ganaste", 
 "Asaltaste dos bancos de tu ciudad y ganas", 
-"Robaste a McDonald's y ganaste", "robaste a roblox y ganaste", "robaste a DIEGO-OFC y ganaste", 
+"Robaste a McDonald's y ganaste", "robaste a roblox y ganaste", "robaste a CRISs y ganaste", 
 "Robaste a discord y ganaste", 
 "Robaste una tienda de ropa y ganaste"
 ]
 
 /*****************************************
-*CREADO POR https://github.com/DIEGO-OFC*
+*CREADO POR https://github.com/cagthegame*
 *****************************************/
