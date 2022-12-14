@@ -125,7 +125,6 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
     
 
 let str = `
-
 💗 *¡HOLA | HI!* ${name}
 ╭━━〔 *${wm}* 〕━━⬣
 ┃🌌🌌🌌🌌🌌🌌🌌🌌🌌
@@ -136,7 +135,6 @@ let str = `
 ┃✪ *USUARIOS | USERS ➺ ${Object.keys(global.db.data.users).length}* 
 ┃🌌🌌🌌🌌🌌🌌🌌🌌🌌
 ╰━━━━━━〔 🔰 *${vs}* 〕━━━━━━⬣
-
 ┌──「🌌𝐒𝐓𝐈𝐂𝐊𝐄𝐑」─
 ├➢🌠 _${usedPrefix}sticker *<responder a imagen o video>*_
 ├➢🌠 _${usedPrefix}sticker *<enlace / link / url>*_
@@ -164,7 +162,7 @@ let str = `
 ├➢🌠 _${usedPrefix}stickerfilter *<efecto> <responder a imagen>*_ 
 └────ׂ─ׂ─ׂ─ׂ───`.trim()
 
-conn.sendHydrated2(m.chat, str, wm, pp, 'https://www.paypal.me/TheShadowBrokers133', '𝙿𝙰𝚈𝙿𝙰𝙻', 'https://github.com/cagthegame/KANTU-BOT', '𝙶𝙸𝚃𝙷𝚄𝙱', [
+conn.sendHydrated2(m.chat, str, wm, pp, 'WASAAA', 'WASA', 'https://github.com/cagthegame/KANTU-BOT', '𝙶𝙸𝚃𝙷𝚄𝙱', [
 
 ['💎 𝙶𝚁𝚄𝙿𝙾𝚂 𝙾𝙵𝙸𝙲𝙸𝙰𝙻𝙴𝚂 💎', '/grupos'],
 
