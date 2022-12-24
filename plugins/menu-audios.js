@@ -14,6 +14,7 @@ let str = `
 *[❕] ALGUNOS AUDIOS SON NUEVOS, SI VE ALGUN TIPO DE FALLA REPÓRTELO CON #reporte <texto>*
 ┌「🎵𝐀𝐔𝐃𝐈𝐎𝐒」
 ├➢▶️ _Quien es tu sempai botsito 7w7_
+├➢▶️ _Wazaa_
 ├➢▶️ _Te diagnostico con gay_
 ├➢▶️ _A nadie le importa_
 ├➢▶️ _Fiesta del admin_
