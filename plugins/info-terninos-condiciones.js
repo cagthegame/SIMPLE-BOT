@@ -1,40 +1,73 @@
-import moment from 'moment-timezone'
-import fs, { promises } from 'fs'
-import fetch from 'node-fetch'
-let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) => {
-try {
-let vn = './media/menu.mp3'
+import { xpRange } from '../lib/levelling.js'
+import PhoneNumber from 'awesome-phonenumber'
+import { promises } from 'fs'
+import { join } from 'path'
+let handler = async (m, { conn, usedPrefix, command, args, usedPrefix: _p, __dirname, isOwner, text, isAdmin, isROwner }) => {
+  
+  
+const { levelling } = '../lib/levelling.js'
+//let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) => {
+
+let { exp, limit, level, role } = global.db.data.users[m.sender]
+let { min, xp, max } = xpRange(level, global.multiplier)
+
 let d = new Date(new Date + 3600000)
 let locale = 'es'
+let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
 let week = d.toLocaleDateString(locale, { weekday: 'long' })
-let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
+let date = d.toLocaleDateString(locale, {
+day: 'numeric',
+month: 'long',
+year: 'numeric'
+})
+let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
+day: 'numeric',
+month: 'long',
+year: 'numeric'
+}).format(d)
+let time = d.toLocaleTimeString(locale, {
+hour: 'numeric',
+minute: 'numeric',
+second: 'numeric'
+})
 let _uptime = process.uptime() * 1000
+let _muptime
+if (process.send) {
+process.send('uptime')
+_muptime = await new Promise(resolve => {
+process.once('message', resolve)
+setTimeout(resolve, 1000)
+}) * 1000
+}
+let { money } = global.db.data.users[m.sender]
+let muptime = clockString(_muptime)
 let uptime = clockString(_uptime)
-let {money} = global.db.data.users[m.sender]
-let { exp, limit, dorracoins, level, role } = global.db.data.users[m.sender]
-let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
-let more = String.fromCharCode(8206)
-let readMore = more.repeat(850)   
+let totalreg = Object.keys(global.db.data.users).length
+let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+let replace = {
+'%': '%',
+p: _p, uptime, muptime,
+me: conn.getName(conn.user.jid),
+
+exp: exp - min,
+maxexp: xp,
+totalexp: exp,
+xp4levelup: max - exp,
+
+level, limit, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
+readmore: readMore
+}
+text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
+  
+//let name = await conn.getName(m.sender)
+let pp = './media/menus/Menu1.jpg'
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let mentionedJid = [who]
 let username = conn.getName(who)
-let imagenMEnu = ['https://i.imgur.com/1qOn8Vw.jpg', 'https://i.imgur.com/vExxeYz.jpg']
-let pp = './galeria/dorratmini.mp4'
-let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-let fsizedoc = '1'.repeat(10)
-let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: yt, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(imagenMEnu.getRandom())).buffer(), sourceUrl: menulinks.getRandom() }}}
-m.reply(`╭──────────────────  
-│⏱️ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎... 
-╰──────────────────`)
+//let user = global.db.data.users[m.sender]
+//user.registered = false
 
-let terminoA = `
-*╭━━━━━━━━━━━━━━━━╾•*
-*┃ ❍ ${ucapan()} ❍*
-*╰━━━━━━━━━━━━━━━━╾•*
-*_Toda la información que se mencione aquí no excluye al Propietario del Bot al uso de KANTU-BOT_*
-`.trim()
-
-let terminoB = `
+let Terminos = `
 *_No Somos responsables del desconocimiento que tenga por parte de esta información._* 
 *TÉRMINOS DE PRIVACIDAD*
 _- Somos consciente del constante uso que le pueda dar al Bot, y también Garantizamos que la información como (imágenes, vídeos, enlaces, ubicación, Audios, Stickers, Gif, Contactos que Usted Proporcione en torno a Número(s) Oficial(es) No son ni serán Compartido Con Nadie, ni se usaran dicho Datos fuera del entorno del BOT._
@@ -57,12 +90,38 @@ _- NO usar el Bot siendo Número(s) Oficial(es) para llevar a cabo alguna acció
 _- NO use el comando de SPAM repetidamente, ya que Provocará un Mal funcionamiento en el BOT, tampoco envie al BOT mensajes que puedan comprometer el Funcionamiento de la misma._
 _- Al hacer uso de ciertos comandos que tengan como objetivo socavar la incomodidad, intranquilidad, molestia u otro termino tajante, se tomarán las respectivas sanciones o llamados de alerta para prevalecer la integridad de los/las Usuarios(as) y funcionamiento de KANTU-BOT._
 *ESTA ES LA PAGINA OFICIAL DEL BOT*
-*https://sites.google.com/view/dorratbotmd/inicio*
+*https://www.atom.bio/kantu-bot-team/*
 *ESTE ES EL REPOSITORIO OFICIAL*
 *https://github.com/cagthegame/KANTU-BOT*
+*ESTE ES GRUPO OFICIAL DEL BOT*
+*https://chat.whatsapp.com/FPkQqMHIMLh2gR626AOU7V*
 *CUENTA OFICIAL DE ASISTENCIA - WHATSAPP*
 ~ _Solo en esta Cuenta Respondo si tiene Dudas, Preguntas o Necesita Ayuda sobre KantuBot, También puede Comunicarse en Caso de Temas de Colaboración_
 *Wa.me/5215591478197*
+*~ Muchas Gracias Por tomarte el tiempo en informate sobre KANTU - BOT*
+`.trim()
+conn.sendHydrated(m.chat, Terminos,  `${wm}\nEstamos de acuerdo en Hacer Colaboraciones con Personas Comprometidas, manteniendo el Respeto Puedes Contactar si ese es el caso a esta Grupo Oficial | https://chat.whatsapp.com/Fi3lEmQRNTML4Akb9WC94G`, pp, 'https://github.com/cagthegame/KANTU-BOT', 'KANTU BOT', null, null, [
+['menu conpleto', '.allmenu'],
+['listamenu', '/menulista'],
+['menucompleto', '#menu']
+], m,)
+}
+
+handler.customPrefix = /terminos|términos|términos, condiciones y privacidad|terminos, condiciones y privacidad|términos y condiciones y privacidad|terminosycondicionesyprivacidad|terminosycondiciones|terminos y condiciones y privacidad|terminos y condiciones|terminos y condiciones|terminos de uso|Terminos de uso|Terminó se uso|términos de uso|Términos de uso|Términos y condiciones/i
+handler.command = new RegExp
+//handler.register = true
+handler.exp = 70
+export default handler
+
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
+function clockString(ms) {
+let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
+
+
 *~ Muchas Gracias Por tomarte el tiempo en informate sobre KANTU-BOT
 `.trim()
 
