@@ -29,7 +29,7 @@ let doxeo = `*[ ✔ ] 𝗡𝗨𝗠𝗘𝗥𝗢 𝗕𝗔𝗡𝗘𝗔𝗗𝗢*\n*�
 
 m.reply(doxeo, null, { mentions: conn.parseMention(doxeo) })
 }
-handler.help = ['doxear <nombre> | <@tag>']
+handler.help = ['soporte <nombre> | <@tag>']
 handler.tags = ['fun']
 handler.command = /^darsoporte|enviarasoporte|darbaneowhatsapp/i
 export default handler
