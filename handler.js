@@ -34,8 +34,6 @@ export async function handler(chatUpdate) {
         if (!m)
             return
         m.exp = 0
-        m.dorracoins = false
-        m.bitcoins = false
         m.limit = false
         try {
             // TODO: use loop to insert data instead of this
@@ -46,8 +44,7 @@ export async function handler(chatUpdate) {
             if (user) {
                 if (!isNumber(user.exp)) user.exp = 0
 		if (!('premium' in user)) user.premium = false
-		if (!isNumber(user.joincount)) user.joincount = 2
-                if (!isNumber(user.bitcoins)) user.bitcoins = 10
+		if (!isNumber(user.joincount)) user.joincount = 1
                 if (!isNumber(user.dorracoins)) user.dorracoins = 20    	    
                 if (!isNumber(user.limit)) user.limit = 20    	       
                 if (!('registered' in user)) user.registered = false
@@ -76,10 +73,8 @@ export async function handler(chatUpdate) {
                         
 	        }
 		                    		    
-      
-       	                    		    
           if (!isNumber(user.afk)) user.afk = -1
-	      //if (!('autolevelup' in user))  user.autolevelup = true
+	      if (!('autolevelup' in user))  user.autolevelup = false
 	      if (!('role' in user)) user.role = 'Novato'
               if (!isNumber(user.agility)) user.agility = 0
               if (!isNumber(user.anakanjing)) user.anakanjing = 0
@@ -153,7 +148,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.crystal)) user.crystal = 0
               if (!isNumber(user.cumi)) user.cumi = 0
               if (!isNumber(user.cupon)) user.cupon = 0
-              if (!isNumber(user.diamond)) user.diamond = 3
+              if (!isNumber(user.diamond)) user.diamond = 0
               if (!isNumber(user.dog)) user.dog = 0
               if (!isNumber(user.dogexp)) user.dogexp = 0
               if (!isNumber(user.doglastfeed)) user.doglastfeed = 0
@@ -171,7 +166,6 @@ export async function handler(chatUpdate) {
 	      if (!isNumber(user.eleksirb)) user.eleksirb = 0
 	      if (!isNumber(user.emasbatang)) user.emasbatang = 0
 	      if (!isNumber(user.emasbiasa)) user.emasbiasa = 0
-	      if (!isNumber(user.fideos)) user.fideos = 0    
               if (!isNumber(user.fishingrod)) user.fishingrod = 0
               if (!isNumber(user.fishingroddurability)) user.fishingroddurability = 0
               if (!isNumber(user.fortress)) user.fortress = 0
@@ -214,7 +208,6 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.jagung)) user.jagung = 0
               if (!isNumber(user.jagungbakar)) user.jagungbakar = 0
               if (!isNumber(user.jeruk)) user.jeruk = 0
-              if (!isNumber(user.joindorracoins)) user.joindorracoins = 1
               if (!isNumber(user.joinlimit)) user.joinlimit = 1
               if (!isNumber(user.judilast)) user.judilast = 0
               if (!isNumber(user.kaleng)) user.kaleng = 0
@@ -285,8 +278,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.lastcodereg)) user.lastcodereg = 0
               if (!isNumber(user.lastcrusade)) user.lastcrusade = 0
               if (!isNumber(user.lastdagang)) user.lastdagang = 0
-	      if (!isNumber(user.lastdiamantes)) user.lastdiamantes = 0  
-              if (!isNumber(user.lastdorracoins)) user.lastdorracoins = 0  
+	      if (!isNumber(user.lastdiamantes)) user.lastdiamantes = 0    
               if (!isNumber(user.lastduel)) user.lastduel = 0
               if (!isNumber(user.lastdungeon)) user.lastdungeon = 0
               if (!isNumber(user.lasteasy)) user.lasteasy = 0
@@ -296,7 +288,6 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.lastgojek)) user.lastgojek = 0
               if (!isNumber(user.lastgrab)) user.lastgrab = 0
               if (!isNumber(user.lasthourly)) user.lasthourly = 0
-	      if (!isNumber(user.halloween)) user.halloween = 0
               if (!isNumber(user.lasthunt)) user.lasthunt = 0
               if (!isNumber(user.lastIstigfar)) user.lastIstigfar = 0
               if (!isNumber(user.lastjb)) user.lastjb = 0
@@ -317,7 +308,6 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.lastngojek)) user.lastngojek = 0
               if (!isNumber(user.lastopen)) user.lastopen = 0
               if (!isNumber(user.lastpekerjaan)) user.lastpekerjaan = 0
-	      if (!isNumber(user.lastpago)) user.lastpago = 0 
               if (!isNumber(user.lastpotionclaim)) user.lastpotionclaim = 0
               if (!isNumber(user.lastrampok)) user.lastrampok = 0
               if (!isNumber(user.lastramuanclaim)) user.lastramuanclaim = 0
@@ -343,10 +333,8 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.leleg)) user.leleg = 0
               if (!isNumber(user.level)) user.level = 0
               if (!isNumber(user.dorracoins)) user.dorracoins = 20
-              if (!isNumber(user.bitcoins)) user.bitcoins = 10
               if (!isNumber(user.limit)) user.limit = 20
               if (!isNumber(user.limitjoinfree)) user.limitjoinfree = 1
-              if (!isNumber(user.dorracoinsjoinfree)) user.dorracoinsjoinfree = 1
               if (!isNumber(user.lion)) user.lion = 0
               if (!isNumber(user.lionexp)) user.lionexp = 0
               if (!isNumber(user.lionlastfeed)) user.lionlastfeed = 0
@@ -363,7 +351,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.makananserigala)) user.makananserigala = 0
               if (!isNumber(user.mana)) user.mana = 0
               if (!isNumber(user.mangga)) user.mangga = 0
-              if (!isNumber(user.money)) user.money = 500
+              if (!isNumber(user.money)) user.money = 0
               if (!isNumber(user.monyet)) user.monyet = 0
               if (!isNumber(user.mythic)) user.mythic = 0
               if (!isNumber(user.naga)) user.naga = 0
@@ -485,11 +473,10 @@ export async function handler(chatUpdate) {
               if (!user.job) user.job = 'Desempleo'
               if (!user.premium) user.premium = false
               if (!user.premium) user.premiumTime = 0
-              if (!user.rtrofi) user.rtrofi = 'Bronce'     
+              if (!user.rtrofi) user.rtrofi = 'Bronce'
                                                    		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
             } else
-          
-            global.db.data.users[m.sender] = {
+                global.db.data.users[m.sender] = {
 		    
 		    afk: -1,
                     afkReason: '',
@@ -521,7 +508,7 @@ export async function handler(chatUpdate) {
                     armormonster: 0,
                     as: 0,
                     atm: 0,
-                    //autolevelup: true,
+                    autolevelup: false,
                     axe: 0,
                     axedurability: 0,
                     ayam: 0,
@@ -570,7 +557,7 @@ export async function handler(chatUpdate) {
                     crystal: 0,
                     cumi: 0,
                     cupon: 0,
-                    diamond: 3,
+                    diamond: 0,
                     dog: 0,
                     dogexp: 0,
                     doglastfeed: 0,
@@ -588,7 +575,6 @@ export async function handler(chatUpdate) {
 		    eleksirb: 0,
 		    emasbatang: 0,
 		    emasbiasa: 0,
-		    fideos: 0,
                     fishingrod: 0,
                     fishingroddurability: 0,
                     fortress: 0,
@@ -610,7 +596,6 @@ export async function handler(chatUpdate) {
                     griffinlastfeed: 0,
                     gulai: 0,
                     gurita: 0,
-		    halloween: 0,
                     harimau: 0,
                     haus: 100,
                     healt: 100,
@@ -630,8 +615,7 @@ export async function handler(chatUpdate) {
                     jagungbakar: 0,
                     jeruk: 0,
                     job: 'Pengangguran',
-		    joincount: 2,
-                    Joindorracoins: 1,
+		    joincount: 1,
                     joinlimit: 1,
                     judilast: 0,
                     kaleng: 0,
@@ -700,7 +684,6 @@ export async function handler(chatUpdate) {
                     lastcrusade: 0,
                     lastdaang: 0,
                     lastdagang: 0,
-                    lastdorracoins: 0,
 		    lastdiamantes: 0,
                     lastduel: 0,
                     lastdungeon: 0,
@@ -729,7 +712,6 @@ export async function handler(chatUpdate) {
                     lastngojek: 0,
                     lastopen: 0,
                     lastpekerjaan: 0,
-		    lastpago: 0,
                     lastpotionclaim: 0,
                     lastramuanclaim: 0,
                     lastrob: 0,
@@ -752,11 +734,9 @@ export async function handler(chatUpdate) {
                     lelebakar: 0,
                     leleg: 0,
                     level: 0,
-                    bitcoins: 10,
                     dorracoins: 20,
                     limit: 20,
                     limitjoinfree: 1,
-                    dorracoinsjoinfree: 1,
                     lion: 0,
                     lionexp: 0,
                     lionlastfeed: 0,
@@ -775,7 +755,7 @@ export async function handler(chatUpdate) {
                     mana: 20,
                     mangga: 0,
                     misi: '',
-                    money: 500,
+                    money: 0,
                     monyet: 0,
                     mythic: 0,
                     naga: 0,
@@ -927,10 +907,9 @@ export async function handler(chatUpdate) {
 		if (!('reaction' in chat)) chat.reaction = true    
                 if (!('viewonce' in chat)) chat.viewonce = false                                 
                 if (!('antitoxic' in chat)) chat.antitoxic = true
-                if (!('modoadmin' in chat)) chat.modoadmin = false
                 if (!('antiArab' in chat)) chat.antiArab = false
-                if (!('antiTraba' in chat)) chat.antiTraba = false  
-                if (!('simi' in chat)) chat.simi = false         
+                if (!('antiTraba' in chat)) chat.antiTraba = false
+	        if (!('modoadmin' in chat)) chat.modoadmin = false  
                 if (!isNumber(chat.expired)) chat.expired = 0
                     
             } else
@@ -958,12 +937,11 @@ export async function handler(chatUpdate) {
 		    antiTwitter: false,
 		    antifake: false,
                     antiTraba: false,
-                    modoadmin: false,
 		    reaction: true,
                     antiArab: false,
-                    simi: false,
                     antiviewonce: false,
                     antitoxic: true,
+		    modoadmin: false,
                     expired: 0,
                 }
             let settings = global.db.data.settings[this.user.jid]
@@ -972,15 +950,14 @@ export async function handler(chatUpdate) {
                 if (!('self' in settings)) settings.self = false
                 if (!('autoread' in settings)) settings.autoread = false
                 if (!('restrict' in settings)) settings.restrict = false
-		if (!('temporal' in settings)) settings.temporal = true
+		if (!('temporal' in settings)) settings.temporal = false
                 if (!('antiPrivate' in settings)) settings.antiPrivate = false
                 if (!('antiCall' in settings)) settings.antiCall = false
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
                 autoread: false,
                 restrict: false,                
-                modejadibot: true,
-		temporal: true,
+		temporal: false,
                 antiPrivate: false,
 		antiCall: false
             }
@@ -1037,17 +1014,17 @@ export async function handler(chatUpdate) {
         const isAdmin = isRAdmin || user?.admin == 'admin' || false // Is User Admin?
         const isBotAdmin = bot?.admin || false // Are you Admin?
 
-        const ___dirname = path.join(path.dirname(fileURLToPath(import.meta.url)), './comandos')
-        for (let name in global.comandos) {
-            let comandos = global.comandos[name]
-            if (!comandos)
+        const ___dirname = path.join(path.dirname(fileURLToPath(import.meta.url)), './plugins')
+        for (let name in global.plugins) {
+            let plugin = global.plugins[name]
+            if (!plugin)
                 continue
-            if (comandos.disabled)
+            if (plugin.disabled)
                 continue
             const __filename = join(___dirname, name)
-            if (typeof comandos.all === 'function') {
+            if (typeof plugin.all === 'function') {
                 try {
-                    await comandos.all.call(this, m, {
+                    await plugin.all.call(this, m, {
                         chatUpdate,
                         __dirname: ___dirname,
                         __filename
@@ -1058,17 +1035,17 @@ export async function handler(chatUpdate) {
                     for (let [jid] of global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
                         let data = (await conn.onWhatsApp(jid))[0] || {}
                         if (data.exists)
-                            m.reply(`*[ ⛔ 𝚁𝙴𝙿𝙾𝚁𝚃𝙴 𝙳𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙲𝙾𝙽 𝙵𝙰𝙻𝙻𝙾𝚂 ⛔ ]*\n\n*—◉ 🗂️ 𝙿𝙻𝚄𝙶𝙸𝙽:* ${name}\n*—◉ 👥 𝚄𝚂𝚄𝙰𝚁𝙸𝙾:* ${m.sender}\n*—◉ 🤖 𝙲𝙾𝙼𝙰𝙽𝙳𝙾:* ${m.text}\n\n*—◉ 🛡️ 𝙴𝚁𝚁𝙾𝚁:*\n\`\`\`${format(e)}\`\`\`\n\n*[❗] 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 𝙳𝙴𝙻 𝙱𝙾𝚃 𝙿𝙰𝚁𝙰 𝙳𝙰𝚁𝙻𝙴 𝚄𝙽𝙰 𝚂𝙾𝙻𝚄𝙲𝙸𝙾𝙽, 𝙿𝚄𝙴𝙳𝙴 𝚄𝚂𝙰𝚁 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 #reporte*`.trim(), data.jid)
+                            m.reply(`*[ ⚠️ 𝚁𝙴𝙿𝙾𝚁𝚃𝙴 𝙳𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙲𝙾𝙽 𝙵𝙰𝙻𝙻𝙾𝚂 ⚠️ ]*\n\n*—◉ 𝙿𝙻𝚄𝙶𝙸𝙽:* ${name}\n*—◉ 𝚄𝚂𝚄𝙰𝚁𝙸𝙾:* ${m.sender}\n*—◉ 𝙲𝙾𝙼𝙰𝙽𝙳𝙾:* ${m.text}\n\n*—◉ 𝙴𝚁𝚁𝙾𝚁:*\n\`\`\`${format(e)}\`\`\`\n\n*[❗] 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 𝙳𝙴𝙻 𝙱𝙾𝚃 𝙿𝙰𝚁𝙰 𝙳𝙰𝚁𝙻𝙴 𝚄𝙽𝙰 𝚂𝙾𝙻𝚄𝙲𝙸𝙾𝙽, 𝙿𝚄𝙴𝙳𝙴 𝚄𝚂𝙰𝚁 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 #reporte*`.trim(), data.jid)
                     }
                 }
             }
             if (!opts['restrict'])
-                if (comandos.tags && comandos.tags.includes('admin')) {
+                if (plugin.tags && plugin.tags.includes('admin')) {
                     // global.dfail('restrict', m, this)
                     continue
                 }
             const str2Regex = str => str.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
-            let _prefix = comandos.customPrefix ? comandos.customPrefix : conn.prefix ? conn.prefix : global.prefix
+            let _prefix = plugin.customPrefix ? plugin.customPrefix : conn.prefix ? conn.prefix : global.prefix
             let match = (_prefix instanceof RegExp ? // RegExp Mode?
                 [[_prefix.exec(m.text), _prefix]] :
                 Array.isArray(_prefix) ? // Array?
@@ -1082,8 +1059,8 @@ export async function handler(chatUpdate) {
                         [[new RegExp(str2Regex(_prefix)).exec(m.text), new RegExp(str2Regex(_prefix))]] :
                         [[[], new RegExp]]
             ).find(p => p[1])
-            if (typeof comandos.before === 'function') {
-                if (await comandos.before.call(this, m, {
+            if (typeof plugin.before === 'function') {
+                if (await plugin.before.call(this, m, {
                     match,
                     conn: this,
                     participants,
@@ -1102,7 +1079,7 @@ export async function handler(chatUpdate) {
                 }))
                     continue
             }
-            if (typeof comandos !== 'function')
+            if (typeof plugin !== 'function')
                 continue
             if ((usedPrefix = (match[0] || '')[0])) {
                 let noPrefix = m.text.replace(usedPrefix, '')
@@ -1111,21 +1088,21 @@ export async function handler(chatUpdate) {
                 let _args = noPrefix.trim().split` `.slice(1)
                 let text = _args.join` `
                 command = (command || '').toLowerCase()
-                let fail = comandos.fail || global.dfail // When failed
-                let isAccept = comandos.command instanceof RegExp ? // RegExp Mode?
-                    comandos.command.test(command) :
-                    Array.isArray(comandos.command) ? // Array?
-                        comandos.command.some(cmd => cmd instanceof RegExp ? // RegExp in Array?
+                let fail = plugin.fail || global.dfail // When failed
+                let isAccept = plugin.command instanceof RegExp ? // RegExp Mode?
+                    plugin.command.test(command) :
+                    Array.isArray(plugin.command) ? // Array?
+                        plugin.command.some(cmd => cmd instanceof RegExp ? // RegExp in Array?
                             cmd.test(command) :
                             cmd === command
                         ) :
-                        typeof comandos.command === 'string' ? // String?
-                            comandos.command === command :
+                        typeof plugin.command === 'string' ? // String?
+                            plugin.command === command :
                             false
 
                 if (!isAccept)
                     continue
-                m.comandos = name
+                m.plugin = name
                 if (m.chat in global.db.data.chats || m.sender in global.db.data.users) {
                     let chat = global.db.data.chats[m.chat]
                     let user = global.db.data.users[m.sender]
@@ -1134,66 +1111,70 @@ export async function handler(chatUpdate) {
                     if (name != 'owner-unbanuser.js' && user?.banned)
                         return
                 }
-                let hl = _prefix 
+		    let hl = _prefix 
                 let adminMode = global.db.data.chats[m.chat].modoadmin
-                let dorrat = `${comandos.botAdmin || comandos.admin || comandos.group || comandos || noPrefix || hl ||  m.text.slice(0, 1) == hl || comandos.command}`
-                if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && dorrat) return   
-
-                if (comandos.rowner && comandos.owner && !(isROwner || isOwner)) { // Both Owner
+                let mystica = `${plugin.botAdmin || plugin.admin || plugin.group || plugin || noPrefix || hl ||  m.text.slice(0, 1) == hl || plugin.command}`
+                if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && mystica) return   
+		    
+                if (plugin.rowner && plugin.owner && !(isROwner || isOwner)) { // Both Owner
                     fail('owner', m, this)
                     continue
                 }
-                if (comandos.rowner && !isROwner) { // Real Owner
+                if (plugin.rowner && plugin.owner && !(isROwner || isOwner)) { // Both Owner
+                    fail('owner', m, this)
+                    continue
+                }
+                if (plugin.rowner && !isROwner) { // Real Owner
                     fail('rowner', m, this)
                     continue
                 }
-                if (comandos.owner && !isOwner) { // Number Owner
+                if (plugin.owner && !isOwner) { // Number Owner
                     fail('owner', m, this)
                     continue
                 }
-                if (comandos.mods && !isMods) { // Moderator
+                if (plugin.mods && !isMods) { // Moderator
                     fail('mods', m, this)
                     continue
                 }
-                if (comandos.premium && !isPrems) { // Premium
+                if (plugin.premium && !isPrems) { // Premium
                     fail('premium', m, this)
                     continue
                 }
-                if (comandos.group && !m.isGroup) { // Group Only
+                if (plugin.group && !m.isGroup) { // Group Only
                     fail('group', m, this)
                     continue
-                } else if (comandos.botAdmin && !isBotAdmin) { // You Admin
+                } else if (plugin.botAdmin && !isBotAdmin) { // You Admin
                     fail('botAdmin', m, this)
                     continue
-                } else if (comandos.admin && !isAdmin) { // User Admin
+                } else if (plugin.admin && !isAdmin) { // User Admin
                     fail('admin', m, this)
                     continue
                 }
-                if (comandos.private && m.isGroup) { // Private Chat Only
+                if (plugin.private && m.isGroup) { // Private Chat Only
                     fail('private', m, this)
                     continue
                 }
-                if (comandos.register == true && _user.registered == false) { // Butuh daftar?
+                if (plugin.register == true && _user.registered == false) { // Butuh daftar?
                     fail('unreg', m, this)
                     continue
                 }
                 m.isCommand = true
-                let xp = 'exp' in comandos ? parseInt(comandos.exp) : 17 // XP Earning per command
+                let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 // XP Earning per command
                 if (xp > 2000)
                     m.reply('Ngecit -_-') // Hehehe
                 else
                     m.exp += xp
-                if (!isPrems && comandos.limit && global.db.data.users[m.sender].limit < comandos.limit * 1) {
+                if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
                     this.reply(m.chat, `${ag}\n𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀𝙎. 💎 𝙋𝙐𝙀𝘿𝙀 𝘾𝙊𝙈𝙋𝙍𝘼𝙍 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy*\n\n𝙄𝙏 𝙃𝘼𝙎 𝙉𝙊 𝘿𝙄𝘼𝙈𝙊𝙉𝘿𝙎. 💎 𝙔𝙊𝙐 𝘾𝘼𝙉 𝘽𝙐𝙔 𝙒𝙄𝙏𝙃 𝙏𝙃𝙀 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 *${usedPrefix}buy*`, m)
                     continue // Limit habis
                 }
-if (!isPrems && comandos.dorracoins && global.db.data.users[m.sender].dorracoins < comandos.dorracoins * 1) {
-                    this.reply(m.chat, `${ag}\n\n*NO TIENE DORRATCOINS* 🪙\n\n *puede conseguir dorratcoins con el comando #minarcoins o comprando con #buy dorracoins [cantidad]*`, m)
+if (!isPrems && plugin.dorracoins && global.db.data.users[m.sender].dorracoins < plugin.dorracoins * 1) {
+                    this.reply(m.chat, `${ag}\n𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝗞𝗔𝗡𝗧𝗨 𝘾𝙊𝙄𝙉𝙎 🪙`, m)
                     continue // Limit habis
 
 }
-                if (comandos.level > _user.level) {
-                    this.reply(m.chat, `𝙉𝙀𝘾𝙀𝙎𝙄𝙏𝘼 𝙀𝙇 𝙉𝙄𝙑𝙀𝙇 ➡️ *${comandos.level}* 𝙋𝘼𝙍𝘼 𝙋𝙊𝘿𝙀𝙍 𝙐𝙎𝘼𝙍 𝙀𝙎𝙏𝙀 𝘾𝙊𝙈𝘼𝙉𝘿𝙊. 𝙏𝙐 𝙉𝙄𝙑𝙀𝙇 𝙀𝙎 ➡️ *${_user.level}* 𝘼𝘾𝙏𝙐𝘼𝙇𝙄𝙕𝘼 𝙏𝙐 𝙉𝙄𝙑𝙀𝙇 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}nivel*\n\n𝙈𝙐𝙎𝙏 𝙍𝙀𝘼𝘾𝙃 𝙏𝙃𝙀 𝙇𝙀𝙑𝙀𝙇 #️⃣ *${comandos.level}* 𝙏𝙊 𝘽𝙀 𝘼𝘽𝙇𝙀 𝙏𝙊 𝙐𝙎𝙀 𝙏𝙃𝙄𝙎 𝘾𝙊𝙈𝙈𝘼𝙉𝘿. 𝙔𝙊𝙐𝙍 𝙇𝙀𝙑𝙀𝙇 𝙄𝙎 #️⃣ *${_user.level}* 𝙐𝙋𝘿𝘼𝙏𝙀 𝙒𝙄𝙏𝙃 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 *${usedPrefix}level*`, m)
+                if (plugin.level > _user.level) {
+                    this.reply(m.chat, `𝙉𝙀𝘾𝙀𝙎𝙄𝙏𝘼 𝙀𝙇 𝙉𝙄𝙑𝙀𝙇 ➡️ *${plugin.level}* 𝙋𝘼𝙍𝘼 𝙋𝙊𝘿𝙀𝙍 𝙐𝙎𝘼𝙍 𝙀𝙎𝙏𝙀 𝘾𝙊𝙈𝘼𝙉𝘿𝙊. 𝙏𝙐 𝙉𝙄𝙑𝙀𝙇 𝙀𝙎 ➡️ *${_user.level}* 𝘼𝘾𝙏𝙐𝘼𝙇𝙄𝙕𝘼 𝙏𝙐 𝙉𝙄𝙑𝙀𝙇 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}nivel*\n\n𝙈𝙐𝙎𝙏 𝙍𝙀𝘼𝘾𝙃 𝙏𝙃𝙀 𝙇𝙀𝙑𝙀𝙇 #️⃣ *${plugin.level}* 𝙏𝙊 𝘽𝙀 𝘼𝘽𝙇𝙀 𝙏𝙊 𝙐𝙎𝙀 𝙏𝙃𝙄𝙎 𝘾𝙊𝙈𝙈𝘼𝙉𝘿. 𝙔𝙊𝙐𝙍 𝙇𝙀𝙑𝙀𝙇 𝙄𝙎 #️⃣ *${_user.level}* 𝙐𝙋𝘿𝘼𝙏𝙀 𝙒𝙄𝙏𝙃 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 *${usedPrefix}level*`, m)
                     continue // If the level has not been reached
                 }
                 let extra = {
@@ -1220,10 +1201,10 @@ if (!isPrems && comandos.dorracoins && global.db.data.users[m.sender].dorracoins
                     __filename
                 }
                 try {
-                    await comandos.call(this, m, extra)
+                    await plugin.call(this, m, extra)
                     if (!isPrems)
-                        m.limit = m.limit || comandos.limit || false
-                        m.dorracoins = m.dorracoins || comandos.dorracoins || false
+                        m.limit = m.limit || plugin.limit || false
+                        m.dorracoins = m.dorracoins || plugin.dorracoins || false
                 } catch (e) {
                     // Error occured
                     m.error = e
@@ -1236,15 +1217,15 @@ if (!isPrems && comandos.dorracoins && global.db.data.users[m.sender].dorracoins
                             for (let [jid] of global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
                                 let data = (await conn.onWhatsApp(jid))[0] || {}
                                 if (data.exists)
-                                    m.reply(`*[ ⛔ 𝚁𝙴𝙿𝙾𝚁𝚃𝙴 𝙳𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙲𝙾𝙽 𝙵𝙰𝙻𝙻𝙾𝚂 ⛔ ]*\n\n*—◉ 🗂️ 𝙿𝙻𝚄𝙶𝙸𝙽:* ${m.plugin}\n*—◉ 👥 𝚄𝚂𝚄𝙰𝚁𝙸𝙾:* ${m.sender}\n*—◉ 🤖 𝙲𝙾𝙼𝙰𝙽𝙳𝙾:* ${usedPrefix}${command} ${args.join(' ')}\n\n\`\`\`${text}\`\`\`\n\n*[❗] 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 𝙳𝙴𝙻 𝙱𝙾𝚃 𝙿𝙰𝚁𝙰 𝙳𝙰𝚁𝙻𝙴 𝚄𝙽𝙰 𝚂𝙾𝙻𝚄𝙲𝙸𝙾𝙽, 𝙿𝚄𝙴𝙳𝙴 𝚄𝚂𝙰𝚁 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 #reporte*`.trim(), data.jid)
+                                    m.reply(`*[ ⚠️ 𝚁𝙴𝙿𝙾𝚁𝚃𝙴 𝙳𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙲𝙾𝙽 𝙵𝙰𝙻𝙻𝙾𝚂 ⚠️ ]*\n\n*—◉ 𝙿𝙻𝚄𝙶𝙸𝙽:* ${m.plugin}\n*—◉ 𝚄𝚂𝚄𝙰𝚁𝙸𝙾:* ${m.sender}\n*—◉ 𝙲𝙾𝙼𝙰𝙽𝙳𝙾:* ${usedPrefix}${command} ${args.join(' ')}\n\n\`\`\`${text}\`\`\`\n\n*[❗] 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 𝙳𝙴𝙻 𝙱𝙾𝚃 𝙿𝙰𝚁𝙰 𝙳𝙰𝚁𝙻𝙴 𝚄𝙽𝙰 𝚂𝙾𝙻𝚄𝙲𝙸𝙾𝙽, 𝙿𝚄𝙴𝙳𝙴 𝚄𝚂𝙰𝚁 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 #reporte*`.trim(), data.jid)
                             }
                         m.reply(text)
                     }
                 } finally {
                     // m.reply(util.format(_user))
-                    if (typeof comandos.after === 'function') {
+                    if (typeof plugin.after === 'function') {
                         try {
-                            await comandos.after.call(this, m, extra)
+                            await plugin.after.call(this, m, extra)
                         } catch (e) {
                             console.error(e)
                         }
@@ -1252,7 +1233,7 @@ if (!isPrems && comandos.dorracoins && global.db.data.users[m.sender].dorracoins
                     if (m.limit)
                         m.reply(+m.limit + ' 𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀(𝙎) 💎 𝙐𝙎𝘼𝘿𝙊(𝙎)')
                  if (m.dorracoins)
-                        m.reply(+m.dorracoins + ' 𝙆𝘼𝙉𝙏𝙐𝘾𝙊𝙄𝙉𝙎 🪙 𝙐𝙎𝘼𝘿𝙊(𝙎)')
+                        m.reply(+m.dorracoins + ' 𝗞𝗔𝗡𝗧𝗨𝘾𝙊𝙄𝙉𝙎 🪙 𝙐𝙎𝘼𝘿𝙊(𝙎)')
               
                 }
                 break
@@ -1276,10 +1257,10 @@ if (!isPrems && comandos.dorracoins && global.db.data.users[m.sender].dorracoins
             }
 
             let stat
-            if (m.comandos) {
+            if (m.plugin) {
                 let now = +new Date
-                if (m.comandos in stats) {
-                    stat = stats[m.comandos]
+                if (m.plugin in stats) {
+                    stat = stats[m.plugin]
                     if (!isNumber(stat.total))
                         stat.total = 1
                     if (!isNumber(stat.success))
@@ -1289,7 +1270,7 @@ if (!isPrems && comandos.dorracoins && global.db.data.users[m.sender].dorracoins
                     if (!isNumber(stat.lastSuccess))
                         stat.lastSuccess = m.error != null ? 0 : now
                 } else
-                    stat = stats[m.comandos] = {
+                    stat = stats[m.plugin] = {
                         total: 1,
                         success: m.error != null ? 0 : 1,
                         last: now,
@@ -1322,6 +1303,7 @@ if (!isPrems && comandos.dorracoins && global.db.data.users[m.sender].dorracoins
 		
     }
 }
+
 
 /**
  * Handle groups participants update
