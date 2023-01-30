@@ -4,8 +4,6 @@ const { levelling } = '../lib/levelling.js'
 import moment from 'moment-timezone'
 let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
 let locale = 'es'
-let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-let taguser = await conn.getName(m.sender)
 let d = new Date(new Date + 3600000)
 let time = d.toLocaleTimeString(locale, {
       hour: 'numeric',
@@ -21,8 +19,6 @@ let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime) 
 wm = global.wm
 vs = global.vs
-
-let pareja = global.db.data.users[m.sender].pasangan
 let { exp, limit, dorracoins, level, role } = global.db.data.users[m.sender]
 let { min, xp, max } = xpRange(level, global.multiplier)
 //let name = await conn.getName(m.sender)
@@ -30,7 +26,7 @@ let { min, xp, max } = xpRange(level, global.multiplier)
 const sections = [{
 title: comienzo + ' ' + lenguajeGB['smsLista1']() + ' ' + fin,
 rows: [
-{title: "│🌐│MINECRAFT-SERVER", rowId:`${usedPrefix}mc-server`},  
+{title: "│🌐│WASAA", rowId:`${usedPrefix}mc-server`},  
 {title: lenguajeGB['smsLista2'](), rowId:`${usedPrefix}creator`},  
 {title: lenguajeGB['smsLista3'](), rowId:`${usedPrefix}infobot`},
 {title: lenguajeGB['smsDonar'](), rowId:`${usedPrefix}donar`},
